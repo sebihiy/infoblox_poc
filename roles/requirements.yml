@@ -1,0 +1,5 @@
+---
+- src: https://github.com/sebihiy/infoblox.git
+  version: "0.1"
+  name: infoblox
+  scm: git

@@ -1,0 +1,22 @@
+- hosts: localhost
+  connection: local
+  gather_facts: true
+  vars_files:
+    - vars/tst.yml
+  vars_prompt:
+  - name: "infoblox_name"
+    prompt: "Enter name of infoblox record for test"
+    private: no
+
+  - name: "infoblox_ipv4addr"
+    prompt: "Enter ip of infoblox record for test"
+    private: no
+  tasks:
+  vars:
+    infoblox_name: "{{ infoblox_name }}"
+    infoblox_ipv4addr: "{{ infoblox_ipv4addr }}"
+    infoblox_recordtype: 'host'
+    infoblox_action: 'create'
+
+  roles:
+    - infoblox
