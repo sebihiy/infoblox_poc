@@ -1,0 +1,4 @@
+---
+
+# 1- Create DNS enter on infoblox
+- import_playbook: insert.yml infoblox_name="{{ infoblox_name }}" infoblox_ipv4addr="{{ infoblox_ipv4addr }}"
